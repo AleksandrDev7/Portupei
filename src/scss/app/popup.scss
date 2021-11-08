@@ -1,0 +1,134 @@
+.popup {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.open {
+  display: block;
+  animation-name: visionPopup;
+  animation-duration: 0.5s;
+}
+
+.blackout {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  animation-name: visionPopup;
+  animation-duration: 1s;
+}
+
+.popup-content {
+  background-color: #fff;
+  height: 350px;
+  width: 650px;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.popup-content_block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.popup-content_block:first-child {
+  margin: 0;
+}
+
+.popup-content_block .cross {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  padding: 0 2px;
+}
+
+.popup-content_block .cross:hover {
+  cursor: pointer;
+}
+
+.popup-content_block > .item_price {
+  margin: 0;
+}
+
+  .item_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.item_form select,
+.item_form input {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  border: 1px #ceced3 solid;
+  margin: 5px 0;
+}
+
+.item_form select {
+  appearance: none;
+  overflow: hidden;
+  background-image: url('/images/rectangle.png');
+  background-repeat: no-repeat;
+  background-position-x: 97%;
+  background-position-y: 50%;
+  font-size: 18px;
+  font-weight: normal;
+  padding: 12px 0;
+}
+
+.item_form select option {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.item_form select:hover {
+  cursor: pointer;
+}
+
+.item_form input::placeholder {
+  text-align: center;
+}
+
+.item_btn button {
+  padding: 15px 70px;
+}
+
+@media screen and (max-device-width: 640px) {
+  .popup-content {
+    width: 300px;
+    height: 700px;
+    flex-direction: column;
+    left: 50%;
+    top: 50%;
+    transform: translate(-55%, -45%);
+  }
+
+  .item_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+  }
+
+  .item_btn button {
+    padding: 10px 40px;
+  }
+
+}

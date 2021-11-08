@@ -1,0 +1,66 @@
+.table {
+  margin-top: 15px;
+  padding: 30px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 21px 3px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0 1px 21px 3px rgba(34, 60, 80, 0.2);
+  box-shadow: 0 1px 21px 3px rgba(34, 60, 80, 0.2);
+  border-collapse:collapse
+}
+
+.table_size .page  .table  tr {
+  height: 40px;
+}
+
+.table_size .page .table thead {
+  font-size: 14px;
+  line-height: 48px;
+  font-weight: bold;
+}
+
+.table_size .page .table tbody tr:nth-child(2n),
+.table_size .page .table thead tr:first-child {
+  background-color: #e7e7e7;
+}
+
+.table_size .page .table tbody tr:first-child > td {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.table_size .page .table tbody tr td {
+  padding: 0 25px;
+  font-size: 14px;
+}
+
+.table_size .page table tbody tr td.name {
+  text-align: left;
+  padding: 0 60px 0 30px;
+  font-size: 14px;
+  line-height: 48px;
+  font-weight: bold;
+}
+
+.table_size .page .table thead tr td.name {
+  text-align: left;
+  padding: 0 60px 0 30px;
+}
+
+@media screen and (max-device-width: 960px) {
+  .table_size .page .table tbody tr td.name,
+  .table_size .page .table thead tr td.name {
+    padding: 0 15px 0 0;
+  }
+}
+
+
+@media screen and (max-device-width: 640px) {
+  .table_size .page .table tbody tr td.name,
+  .table_size .page .table thead tr td.name {
+    padding: 0 10px 0 0;
+  }
+
+  .table_size .page .table tbody tr td {
+    padding: 0 5px;
+  }
+}
